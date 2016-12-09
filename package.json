@@ -1,7 +1,7 @@
 {
-  "name": "aframe-example-component",
+  "name": "aframe-crawling-cursor",
   "version": "1.0.0",
-  "description": "Example component for A-Frame.",
+  "description": "Cursor which moves along with objects.",
   "main": "index.js",
   "scripts": {
     "build": "browserify examples/main.js -o examples/build.js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ngokevin/aframe-component-boilerplate.git"
+    "url": "git+https://github.com/jujunjun110/crawling-cursor.git"
   },
   "keywords": [
     "aframe",
@@ -51,5 +51,8 @@
       "examples/build.js",
       "dist/**"
     ]
+  },
+  "directories": {
+    "example": "examples"
   }
 }
