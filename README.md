@@ -1,6 +1,6 @@
 # Crawling Cursor
 
-A A-Frame component to move cursor along object's surface.
+An A-Frame component to move cursor along object's surface.
 
 [DEMO (github pages)](https://jujunjun110.github.io/crawlingcursor/)
 
@@ -18,17 +18,17 @@ A A-Frame component to move cursor along object's surface.
 
 ## Usage
 
-1.add `id` and `look-at` component on cursor object.
+1.add `id` and `look-at` component on `cursor` object.
 ```html
-<a-ring cursor id="my-cursor" look-at="0 0 0" ></a-ring>
+<a-cursor id="my-cursor" look-at="0 0 0" ></a-cursor>
 ```
 
-2.add `raycaster` component and `crawling-cursor` component with a target cursor selector on camera object. 
+2.add `raycaster` component and `crawling-cursor` component with a target cursor selector on `camera` object. 
 ```html
 <a-camera raycaster crawling-cursor="target: #my-cursor"></a-camera>
 ```
 
-If you want some object to avoid intersection, add `ignore-ray` class to them.
+- If you want some object to avoid intersection, add `ignore-ray` class to them.
 ```html 
 <!-- cursor will not be along with this box -->
 <a-box class="ignore-ray"></a-box>
@@ -48,7 +48,7 @@ If you want some object to avoid intersection, add `ignore-ray` class to them.
 
 <body>
   <a-scene>
-    <a-ring cursor id="my-cursor" look-at="0 0 0" ></a-ring>
+    <a-cursor id="my-cursor" look-at="0 0 0" ></a-cursor>
     <a-camera raycaster crawling-cursor="target: #my-cursor"></a-camera>
   </a-scene>
 </body>
@@ -57,9 +57,10 @@ If you want some object to avoid intersection, add `ignore-ray` class to them.
 ### npm 
 Install via npm:
 
-`npm install aframe-crawling-cursor`
+`$npm install aframe-crawling-cursor`
 
 Then register and use. 
+
 ```javascript
 require('aframe');
 require('k-frame');
