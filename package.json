@@ -54,5 +54,8 @@
   },
   "directories": {
     "example": "examples"
+  },
+  "dependencies": {
+    "k-frame": "^0.3.2-beta2"
   }
 }
