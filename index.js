@@ -44,8 +44,9 @@ AFRAME.registerComponent('crawling-cursor', {
 
             function getNearestIntersection(intersections) {
                 for (var i = 0, l = intersections.length; i < l; i++) {
-                    // ignore cursor itself to avoid flicker
-                    if (intersections[i].object.el.classList.contains("ignore-ray")) {
+
+                    // ignore cursor itself to avoid flicker && ignore "ignore-ray" class
+                    if (data.target === intersections[i].object.el || intersections[i].object.el.classList.contains("ignore-ray")) {
                         continue;
                     }
                     return intersections[i];
