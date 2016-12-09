@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/jujunjun110/aframe-crawling-cursor-component#readme",
   "devDependencies": {
-    "aframe": "^0.2.0",
+    "aframe": "^0.3.0",
     "browserify": "^13.0.0",
     "browserify-css": "^0.9.1",
     "budo": "^8.2.2",
