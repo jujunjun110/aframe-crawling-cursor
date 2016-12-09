@@ -22,7 +22,7 @@ A A-Frame component to move cursor along object's surface.
 <a-camera raycaster crawling-cursor="target: #my-cursor"></a-camera>
 ```
 
-If you want some object avoid intersection, add `ignore-ray` class to them.
+If you want some object to avoid intersection, add `ignore-ray` class to them.
 ```html 
 <!-- cursor will not be along with this box -->
 <a-box class="ignore-ray"></a-box>
