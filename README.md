@@ -31,7 +31,7 @@ A component to move cursor along object's surface for A-Frame.
   <title>My A-Frame Scene</title>
   <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
   <script src="https://rawgit.com/ngokevin/kframe/master/dist/kframe.min.js"></script>
-  <script src="https://rawgit.com/jujunjun110/aframe-crawling-cursor/master/dist/aframe-crawling-cursor.min.js"></script>
+  <script src="https://cdn.rawgit.com/jujunjun110/aframe-crawling-cursor/master/dist/aframe-crawling-cursor.min.js"></script>
 </head>
 
 <body>
