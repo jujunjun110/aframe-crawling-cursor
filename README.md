@@ -7,10 +7,16 @@ A A-Frame component to move cursor along object's surface.
 ![DEMO](demo.gif)
 
 
-# Dependencies
+## Dependencies
 - [look-at](https://github.com/ngokevin/kframe/tree/master/components/look-at/) (now incluede in [kframe](https://github.com/ngokevin/kframe))
 
-# Usage
+## API
+
+| Property | Description | Default Value |
+| -------- | ----------- | ------------- |
+| target   | selector(ID) of a cursor | null          |
+
+## Usage
 
 1.add `id` and `look-at` component on cursor object.
 ```html
@@ -28,9 +34,9 @@ If you want some object to avoid intersection, add `ignore-ray` class to them.
 <a-box class="ignore-ray"></a-box>
 ```
 
-# Installation 
+## Installation 
 
-## browser
+### browser
 
 ```html
 <head>
@@ -48,7 +54,7 @@ If you want some object to avoid intersection, add `ignore-ray` class to them.
 </body>
 ```
 
-## npm 
+### npm 
 Install via npm:
 
 `npm install aframe-crawling-cursor`
