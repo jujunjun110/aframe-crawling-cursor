@@ -2,7 +2,7 @@
 
 An A-Frame component to move cursor along object's surface.
 
-[DEMO (github pages)](https://jujunjun110.github.io/crawlingcursor/)
+**[DEMO PAGE](https://jujunjun110.github.io/crawlingcursor/)**
 
 ![DEMO](demo.gif)
 
