@@ -8,7 +8,7 @@ A A-Frame component to move cursor along object's surface.
 
 
 ## Dependencies
-- [look-at](https://github.com/ngokevin/kframe/tree/master/components/look-at/) (now incluede in [kframe](https://github.com/ngokevin/kframe))
+- [look-at](https://github.com/ngokevin/kframe/tree/master/components/look-at/) (now included in [kframe](https://github.com/ngokevin/kframe))
 
 ## API
 
