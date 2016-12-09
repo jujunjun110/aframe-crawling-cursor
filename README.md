@@ -1,6 +1,6 @@
 # Crawling Cursor
 
-A component to move cursor along object's surface for A-Frame.
+A A-Frame component to move cursor along object's surface.
 
 [DEMO (github pages)](https://jujunjun110.github.io/crawlingcursor/)
 
@@ -49,7 +49,7 @@ If you want some object avoid intersection, add `ignore-ray` class to them.
 ```
 
 ## npm 
-Install via npm.
+Install via npm:
 
 `npm install aframe-crawling-cursor`
 
