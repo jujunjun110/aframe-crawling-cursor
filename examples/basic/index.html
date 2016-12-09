@@ -5,8 +5,22 @@
   </head>
   <body>
     <a-scene>
-      <a-assets></a-assets>
-      <a-entity geometry="primitive: box" material="color: #C03546"></a-entity>
+      <a-assets>
+        <a-asset-item id="roomObj" src="../models/office.obj"></a-asset-item>
+        <a-asset-item id="roomMtl" src="../models/office.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-entity id="room" obj-model="obj: #roomObj; mtl:#roomMtl" position="0 -2.5 0"></a-entity>
+      <a-entity camera look-controls wasd-controls raycaster crawling-cursor="target: #cursor"></a-entity>
+
+      <a-cursor 
+          id="cursor" 
+          class="ignore-ray" 
+          look-at="0 0 0" 
+          geometry="primitive: ring; radius-outer:0.2; radius-inner:0.06;" 
+          material="color:lightblue; opacity: 0.7"
+      ></a-cursor>
+
     </a-scene>
 
     <!-- GitHub Corner. -->
