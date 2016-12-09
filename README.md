@@ -2,7 +2,7 @@
 
 An A-Frame component to move cursor along object's surface.
 
-**[DEMO PAGE](https://jujunjun110.github.io/crawlingcursor/)**
+**[DEMO PAGE (link)](https://jujunjun110.github.io/crawlingcursor/)**
 
 ![DEMO](demo.gif)
 
@@ -14,7 +14,7 @@ An A-Frame component to move cursor along object's surface.
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
-| target   | selector(ID) of a cursor | null          |
+| target   | selector(#id) of a cursor | null          |
 
 ## Usage
 
@@ -28,7 +28,7 @@ An A-Frame component to move cursor along object's surface.
 <a-camera raycaster crawling-cursor="target: #my-cursor"></a-camera>
 ```
 
-- If you want some object to avoid intersection, add `ignore-ray` class to them.
+note: If you want some object to avoid intersection, add `ignore-ray` class to them.
 ```html 
 <!-- cursor will not be along with this box -->
 <a-box class="ignore-ray"></a-box>
