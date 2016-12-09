@@ -17,7 +17,7 @@ A component to move cursor along object's surface for A-Frame.
 <a-ring cursor id="my-cursor" look-at="0 0 0" ></a-ring>
 ```
 
-2.add `raycaster` component and `crawling-cursor` component with target cursor selector on camera object. 
+2.add `raycaster` component and `crawling-cursor` component with a target cursor selector on camera object. 
 ```html
 <a-camera raycaster crawling-cursor="target: #my-cursor"></a-camera>
 ```
@@ -47,7 +47,7 @@ Install via npm.
 
 `npm install aframe-crawling-cursor`
 
-Then register and use. (Do not forget to install k-frame.)
+Then register and use. 
 ```javascript
 require('aframe');
 require('k-frame');
