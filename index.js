@@ -5,9 +5,9 @@ if (typeof AFRAME === 'undefined') {
 }
 
 /**
- * Example component for A-Frame.
+ * Crawling Cursor component for A-Frame.
  */
-AFRAME.registerComponent('example', {
+AFRAME.registerComponent('crawling-cursor', {
   schema: { },
 
   /**
