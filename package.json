@@ -1,7 +1,7 @@
 {
   "name": "aframe-crawling-cursor",
   "version": "1.0.0",
-  "description": "Cursor which moves along with objects.",
+  "description": "A A-Frame component to move cursor along objects' surface.",
   "main": "index.js",
   "scripts": {
     "build": "browserify examples/main.js -o examples/build.js",
