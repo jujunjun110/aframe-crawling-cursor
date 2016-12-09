@@ -10,17 +10,9 @@
         <a-asset-item id="roomMtl" src="../models/office.mtl"></a-asset-item>
       </a-assets>
 
-      <a-entity id="room" obj-model="obj: #roomObj; mtl:#roomMtl" position="0 -2.5 0"></a-entity>
-      <a-entity camera look-controls wasd-controls raycaster crawling-cursor="target: #cursor"></a-entity>
-
-      <a-cursor 
-          id="cursor" 
-          class="ignore-ray" 
-          look-at="0 0 0" 
-          geometry="primitive: ring; radius-outer:0.2; radius-inner:0.06;" 
-          material="color:lightblue; opacity: 0.7"
-      ></a-cursor>
-
+      <a-entity id="room" obj-model="obj: #roomObj; mtl:#roomMtl" position="0 -1 0" ></a-entity>
+      <a-camera raycaster crawling-cursor="target: #cursor"></a-camera>
+      <a-ring cursor id="cursor" class="ignore-ray" look-at="0 0 0" radius-outer="0.2" radius-inner="0.06" color="lightblue" opacity="0.7"></a-ring>
     </a-scene>
 
     <!-- GitHub Corner. -->
