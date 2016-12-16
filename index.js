@@ -30,15 +30,13 @@ AFRAME.registerComponent('crawling-cursor', {
         el.addEventListener("raycaster-intersection", function(e) {
 
             var intersection = getNearestIntersection(e.detail.intersections);
-            if (!intersection) {
-                return;
-            }
+            if (!intersection) {return;}
 
             // look at target coordinate = intersection coordinate + normal vector
             var lookAtTarget = new THREE.Vector3().addVectors(intersection.point, intersection.face.normal);
-            data.target.setAttribute("look-at", lookAtTarget);
+            data.target.object3D.lookAt(lookAtTarget);
 
-            // cursor coordinate = intersection coordinate + normal vector * 0.05（hover 5cm above intersection point）
+            // cursor coordinate = intersection coordinate + normal vector * 0.05(hover 5cm above intersection point)
             var cursorPosition = new THREE.Vector3().addVectors(intersection.point, intersection.face.normal.multiplyScalar(0.05));
             data.target.setAttribute("position", cursorPosition);
 
@@ -46,9 +44,7 @@ AFRAME.registerComponent('crawling-cursor', {
                 for (var i = 0, l = intersections.length; i < l; i++) {
 
                     // ignore cursor itself to avoid flicker && ignore "ignore-ray" class
-                    if (data.target === intersections[i].object.el || intersections[i].object.el.classList.contains("ignore-ray")) {
-                        continue;
-                    }
+                    if (data.target === intersections[i].object.el || intersections[i].object.el.classList.contains("ignore-ray")) {continue;}
                     return intersections[i];
                 }
                 return null;
