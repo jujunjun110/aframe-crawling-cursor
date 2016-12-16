@@ -59,6 +59,5 @@ Then register and use.
 
 ```javascript
 require('aframe');
-require('k-frame');
 require('aframe-crawling-cursor');
 ```
