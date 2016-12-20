@@ -27,6 +27,11 @@ AFRAME.registerComponent('crawling-cursor', {
         var el = this.el;
         var data = this.data;
 
+        if (data.target === null) {
+            console.warn("Please set a valid target id.");
+            return;
+        }
+
         el.addEventListener("raycaster-intersection", function(e) {
 
             var intersection = getNearestIntersection(e.detail.intersections);
