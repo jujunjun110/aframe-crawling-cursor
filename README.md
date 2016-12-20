@@ -14,9 +14,9 @@ An A-Frame component to move cursor along object's surface.
 
 ## Usage
 
-1.add `id` and `look-at` component on `cursor` object.
+1.add `id` on `cursor` object.
 ```html
-<a-cursor id="my-cursor" look-at="0 0 0" ></a-cursor>
+<a-cursor id="my-cursor"></a-cursor>
 ```
 
 2.add `raycaster` component and `crawling-cursor` component with a target cursor selector on `camera` object. 
