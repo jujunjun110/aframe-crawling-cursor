@@ -43,7 +43,7 @@ note: If you want some object to avoid intersection, add `ignore-ray` class to t
 
 <body>
   <a-scene>
-    <a-cursor id="my-cursor" look-at="0 0 0" ></a-cursor>
+    <a-cursor id="my-cursor"></a-cursor>
     <a-camera raycaster crawling-cursor="target: #my-cursor"></a-camera>
   </a-scene>
 </body>
