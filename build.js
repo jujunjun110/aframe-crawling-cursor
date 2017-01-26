@@ -20,14 +20,8 @@ AFRAME.registerComponent('crawling-cursor', {
         }
     },
 
-    /**
-     * Set if component needs multiple instancing.
-     */
     multiple: false,
 
-    /**
-     * Called once when component is attached. Generally for initial setup.
-     */
     init: function() {
         var el = this.el;
         var data = this.data;
@@ -42,8 +36,19 @@ AFRAME.registerComponent('crawling-cursor', {
             var intersection = getNearestIntersection(e.detail.intersections);
             if (!intersection) {return;}
 
-            // look at target coordinate = intersection coordinate + normal vector
-            var lookAtTarget = new THREE.Vector3().addVectors(intersection.point, intersection.face.normal);
+            var global_normal = intersection.face.normal.clone();
+
+            // a matrix which represents item's movement, rotation and scale on global world
+            var mat = intersection.object.matrixWorld;
+
+            // remove parallel movement from the matrix
+            mat.setPosition(new THREE.Vector3(0, 0, 0));
+
+            // change local normal into global normal
+            global_normal.applyMatrix4(mat).normalize();
+
+            // look at target coordinate = intersection coordinate + global normal vector
+            var lookAtTarget = new THREE.Vector3().addVectors(intersection.point, global_normal);
             data.target.object3D.lookAt(lookAtTarget);
 
             // cursor coordinate = intersection coordinate + normal vector * 0.05(hover 5cm above intersection point)
@@ -60,36 +65,7 @@ AFRAME.registerComponent('crawling-cursor', {
                 return null;
             }
         });
-    },
-
-    /**
-     * Called when component is attached and when component data changes.
-     * Generally modifies the entity based on the data.
-     */
-    update: function(oldData) {},
-
-    /**
-     * Called when a component is removed (e.g., via removeAttribute).
-     * Generally undoes all modifications to the entity.
-     */
-    remove: function() {},
-
-    /**
-     * Called on each scene tick.
-     */
-    // tick: function (t) { },
-
-    /**
-     * Called when entity pauses.
-     * Use to stop or remove any dynamic or background behavior such as events.
-     */
-    pause: function() {},
-
-    /**
-     * Called when entity resumes.
-     * Use to continue or add any dynamic or background behavior such as events.
-     */
-    play: function() {}
+    }
 });
 
 },{}],3:[function(require,module,exports){
