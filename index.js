@@ -44,7 +44,7 @@ AFRAME.registerComponent('crawling-cursor', {
             data.target.object3D.lookAt(lookAtTarget);
 
             // cursor coordinate = intersection coordinate + normal vector * 0.05(hover 5cm above intersection point)
-            var cursorPosition = new THREE.Vector3().addVectors(intersection.point, intersection.face.normal.multiplyScalar(0.05));
+            var cursorPosition = new THREE.Vector3().addVectors(intersection.point, global_normal.multiplyScalar(0.05));
             data.target.setAttribute("position", cursorPosition);
 
             function getNearestIntersection(intersections) {
