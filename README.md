@@ -14,17 +14,25 @@ An A-Frame component to move cursor along object's surface.
 
 ## Usage
 
-1.add `id` on `cursor` object.
+1.put `a-cursor` object in a document.
 ```html
-<a-cursor id="my-cursor"></a-cursor>
+<a-cursor></a-cursor>
 ```
 
-2.add `raycaster` component and `crawling-cursor` component with a target cursor selector on `camera` object. 
+2.set `raycaster` and `crawling-cursor` component on `camera` object.
+```html
+<a-camera raycaster crawling-cursor></a-camera>
+```
+
+### options
+
+If you want a entity to be a cursor, you can set id on 'target' property.
 ```html
 <a-camera raycaster crawling-cursor="target: #my-cursor"></a-camera>
+<a-ring id="my-cursor"></a-ring>
 ```
 
-note: If you want some object to avoid intersection, add `ignore-ray` class to them.
+If you want some object to avoid intersection, add `ignore-ray` class to them.
 ```html 
 <!-- cursor will not be along with this box -->
 <a-box class="ignore-ray"></a-box>
@@ -37,14 +45,14 @@ note: If you want some object to avoid intersection, add `ignore-ray` class to t
 ```html
 <head>
   <title>My A-Frame Scene</title>
-  <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/jujunjun110/aframe-crawling-cursor/master/dist/aframe-crawling-cursor.min.js"></script>
 </head>
 
 <body>
   <a-scene>
-    <a-cursor id="my-cursor"></a-cursor>
-    <a-camera raycaster crawling-cursor="target: #my-cursor"></a-camera>
+    <a-cursor></a-cursor>
+    <a-camera raycaster crawling-cursor></a-camera>
   </a-scene>
 </body>
 ```

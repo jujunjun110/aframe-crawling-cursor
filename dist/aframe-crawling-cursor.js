@@ -68,8 +68,14 @@
 	        var data = this.data;
 
 	        if (data.target === null) {
-	            console.warn("Please set a valid target id.");
-	            return;
+	            var cursor = document.querySelector("a-cursor");
+
+	            if (cursor === null) {
+	                console.warn("Please put a-cursor in a document");
+	                return;
+	            }
+
+	            data.target = cursor;
 	        }
 
 	        el.addEventListener("raycaster-intersection", function(e) {
