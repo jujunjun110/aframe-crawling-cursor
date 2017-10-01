@@ -15,7 +15,7 @@
             <a-box position="0 1.6 0" rotation="0 30 0" material="color:blue" scale="1.2 1.2 1.2"></a-box>
         </a-box>
         <a-entity id="room" obj-model="obj: #roomObj; mtl:#roomMtl" position="0 -1 0"></a-entity>
-        <a-camera raycaster crawling-cursor></a-camera>
+        <a-camera raycaster="interval: 10" crawling-cursor></a-camera>
         <a-cursor geometry="primitive: ring; radius-outer: 0.2; radius-inner: 0.06" material="color: lightblue" opacity="0.7"></a-cursor>
     </a-scene>
     <!-- GitHub Corner. -->
@@ -27,33 +27,8 @@
         </svg>
     </a>
     <style>
-    .github-corner:hover .octo-arm {
-        animation: octocat-wave 560ms ease-in-out
-    }
+    .github-corner:hover .octo-arm {animation: octocat-wave 560ms ease-in-out } @keyframes octocat-wave {0%, 100% {transform: rotate(0) } 20%, 60% {transform: rotate(-25deg) } 40%, 80% {transform: rotate(10deg) } } @media (max-width:500px) {.github-corner:hover .octo-arm {animation: none } .github-corner .octo-arm {animation: octocat-wave 560ms ease-in-out } }
     
-    @keyframes octocat-wave {
-        0%,
-        100% {
-            transform: rotate(0)
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg)
-        }
-        40%,
-        80% {
-            transform: rotate(10deg)
-        }
-    }
-    
-    @media (max-width:500px) {
-        .github-corner:hover .octo-arm {
-            animation: none
-        }
-        .github-corner .octo-arm {
-            animation: octocat-wave 560ms ease-in-out
-        }
-    }
-    
-    </body> </html>
+    </body>
+</html>
 
