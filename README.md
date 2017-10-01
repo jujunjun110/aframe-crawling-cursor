@@ -11,6 +11,7 @@ An A-Frame component to move cursor along object's surface.
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
 | target   | selector(#id) of a cursor | null          |
+| offset   | distance cursor hovers over intersection point | 0.05 (meters, or 5cm) |
 
 ## Usage
 

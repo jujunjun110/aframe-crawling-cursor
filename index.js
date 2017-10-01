@@ -12,6 +12,11 @@ AFRAME.registerComponent('crawling-cursor', {
     schema: {
         target: {
             type: "selector"
+        },
+        offset: {
+            // How far above the intersection point does the cursor hover? (Default 5cm)
+            type: "number",
+            default: 0.05,
         }
     },
 
@@ -49,8 +54,8 @@ AFRAME.registerComponent('crawling-cursor', {
             var lookAtTarget = new THREE.Vector3().addVectors(intersection.point, global_normal);
             data.target.object3D.lookAt(lookAtTarget);
 
-            // cursor coordinate = intersection coordinate + normal vector * 0.05(hover 5cm above intersection point)
-            var cursorPosition = new THREE.Vector3().addVectors(intersection.point, global_normal.multiplyScalar(0.05));
+            // cursor coordinate = intersection coordinate + normal vector * offset
+            var cursorPosition = new THREE.Vector3().addVectors(intersection.point, global_normal.multiplyScalar(data.offset));
             data.target.setAttribute("position", cursorPosition);
 
             function getNearestIntersection(intersections) {
