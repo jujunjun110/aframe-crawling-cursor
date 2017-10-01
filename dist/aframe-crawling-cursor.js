@@ -86,7 +86,7 @@
 	        el.addEventListener("raycaster-intersection", function(e) {
 
 	            var intersection = getNearestIntersection(e.detail.intersections);
-	            if (!intersection) {return;}
+	            if (!intersection) { return; }
 
 	            // a matrix which represents item's movement, rotation and scale on global world
 	            var mat = intersection.object.matrixWorld;
@@ -108,15 +108,18 @@
 	                for (var i = 0, l = intersections.length; i < l; i++) {
 
 	                    // ignore cursor itself to avoid flicker && ignore "ignore-ray" class
-	                    if (data.target === intersections[i].object.el || intersections[i].object.el.classList.contains("ignore-ray")) {continue;}
+	                    if (data.target === intersections[i].object.el || intersections[i].object.el.classList.contains("ignore-ray")) { continue; }
 	                    return intersections[i];
 	                }
 	                return null;
 	            }
 	        });
+
+	        setInterval(function() {
+	            el.components.raycaster.refreshObjects();
+	        }, 100)
 	    }
 	});
-
 
 /***/ })
 /******/ ]);
