@@ -1,6 +1,6 @@
 {
     "name": "aframe-crawling-cursor",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "description": "A A-Frame component to move cursor along objects' surface.",
     "main": "index.js",
     "scripts": {
@@ -33,7 +33,7 @@
     },
     "homepage": "https://github.com/jujunjun110/aframe-crawling-cursor#readme",
     "devDependencies": {
-        "aframe": "^0.7.0",
+        "aframe": "^1.0.0",
         "browserify": "^13.0.0",
         "browserify-css": "^0.9.1",
         "budo": "^8.2.2",

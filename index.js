@@ -40,7 +40,7 @@ AFRAME.registerComponent('crawling-cursor',
         // Function to reposition the cursor
         this.positionCursor = function(intersection)
         {
-            if (intersection !== null)
+            if (intersection !== null && intersection.face != null)
             {
                 // a matrix which represents item's movement, rotation and scale on global world
                 var mat = intersection.object.matrixWorld;
